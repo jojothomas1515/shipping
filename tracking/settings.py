@@ -14,14 +14,13 @@ SECRET_KEY = 'django-insecure-+=6cdc043-89xxbv(e&ncd3(8mbmc76%#(v@$fa1wn)((+6ef!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://koreass.herokuapp.com/"]
 
 # Application definition
 
 INSTALLED_APPS = [
-    'ship',
-    'whitenoise',
-    'gunicorn',
+    'ship.apps.ShipConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,6 +105,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 
 # Default primary key field type
