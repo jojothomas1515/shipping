@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.template.response import TemplateResponse
+
 
 # Create your views here.
 
 def index(request):
 
-    return TemplateResponse(request,'ship/index.html', {})
+    return render(request,'ship/index.html')
