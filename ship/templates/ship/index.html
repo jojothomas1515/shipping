@@ -1,0 +1,136 @@
+{% extends 'ship/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="intro bg-dark">
+        <div class="container py-4 text-white text-center d-flex flex-column justify-content-around">
+            <div>
+                <p class="mt-5">We are the leading</p>
+                <h1 class="">WORLDWIDE FREIGHT DELIVERY</h1>
+            </div>
+
+            <div class="tracker py-2 d-flex gap-3">
+                <p>Enter Tracking number</p>
+                <input type="text" class="px-3 mx-4" name="tracking num" id="tinput"/>
+                <input type="button" class="btn btn-primary px-3 mx-4" value="Track"/>
+            </div>
+        </div>
+    </section>
+    <section class="bg-dark text-white">
+        <div class="container p-3 d-flex justify-content-around align-content-center">
+            <div class="d-flex gap-4 ">
+                <i class="fas fa-clock fa-3x"></i>
+                <div>
+                    <h4> OPENING TIMES </h4>
+                    <p>Monday – Friday: 08:00 – 16:00</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4">
+                <i class="fas fa-location fa-3x"></i>
+                <div>
+                    <h4> OUR LOCATION </h4>
+                    <p>16 Cavendish Square, London, W1, W1G</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4">
+                <i class="fas fa-phone fa-3x"></i>
+                <div>
+                    <h4> OUR PHONE </h4>
+                    <p>+447360517322</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info p-1">
+        <div class="container">
+            <div class="row text-center">
+                <div class="info-content col">
+                    <h3> Ocean Freight</h3>
+                    <hr/>
+                    <div>
+                        <img src={% static 'media/1-1.png' %}/>
+                    </div>
+                    <p>
+                        Book ocean freight shipping services easily. Our platform offers
+                        you instant quotes, full price transparency and round-the-clock
+                        sea freight tracking
+                    </p>
+                </div>
+                <div class="info-content col">
+                    <h3> Air Freight</h3>
+                    <hr/>
+                    <div>
+                        <img src={% static 'media/2-1.png' %}/>
+                    </div>
+                    <p>
+                        Working with carefully selected carriers, we operate with
+                        schedules on all the world’s major routes so you can plan with
+                        certainty and become more efficient. We offer a range of highly
+                        flexible products which allow a choice of delivery speeds to
+                        best suit your requirements.
+                    </p>
+                </div>
+                <div class="info-content col">
+                    <h3> Contract Logistics</h3>
+                    <hr/>
+                    <div>
+                        <img src={% static 'media/3-1.png' %}/>
+                    </div>
+                    <p>
+                        When it comes to time to market and cost-effective supply chain
+                        systems, optimized logistics platforms are key-performance
+                        drivers. Space utilization, leaner and automated processes,
+                        enhanced picking and shipping operations are some drivers for
+                        efficiency.
+                    </p>
+                </div>
+                <div class="info-content col">
+                    <h3> Cargo Express</h3>
+                    <hr/>
+                    <div>
+                        <img src={% static 'media/4-1.png' %}/>
+                    </div>
+                    <p>
+                        Smart Express Delivery is service driven and people-sensitive.
+                        Effective management and excellent relationships with the
+                        business partners is essential to our successful operation and
+                        profitable growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission bg-dark py-4">
+        <div class="container text-white">
+            <h3>The Most Progressive Company</h3>
+            <hr></hr>
+            <h6 class="text-secondary">
+                SMART EXPRESS DELIVERY IS YOUR EXPERT FOR SPECIAL SPEED LOGISTICS
+                WITH MORE THAN 10 YEARS OF EXPERIENCE IN COURIER BUSINESS.
+            </h6>
+            <div class="d-flex gap-4 justify-content-start mission-sub-con ">
+                <div class="card p-2 m-4">
+                    <h5 class="text-center ">Vision</h5>
+                    <p class="text-secondary">
+                        It is not a simple statement that, as a global company, we
+                        operate in more than 220 countries. Our vision indicates that we
+                        want to be a logistics company to which people will return – we
+                        will be their first choice not only by delivering their
+                        shipments, but also as an employer or investor.
+                    </p>
+                </div>
+                <div class="card p-2 m-4">
+                    <h5 class="text-center ">Mission</h5>
+                    <p class="text-secondary">
+                        It is not a simple statement that, as a global company, we
+                        operate in more than 220 countries. Our vision indicates that we
+                        want to be a logistics company to which people will return – we
+                        will be their first choice not only by delivering their
+                        shipments, but also as an employer or investor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

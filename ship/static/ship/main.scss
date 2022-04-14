@@ -1,0 +1,39 @@
+//navbar
+
+.navbar {
+  background-color: var(--bs-dark);
+  top:0 !important;
+  height: 120px;
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  z-index: 500;
+
+  .container {
+    height: 100px;
+    align-content: center;
+    justify-content: space-between;
+
+    .logo-con {
+      position: relative;
+      top: 20px;
+      width: 400px;
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    ul {
+      gap: 20px;
+
+    }
+    nav{
+      height:max-content;
+    }
+
+  }
+
+}
+
+
