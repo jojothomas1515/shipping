@@ -6,24 +6,33 @@
   position: -webkit-sticky !important;
   z-index: 500;
 }
+
 .navbar .container {
   height: 100px;
-  align-content: center;
-  justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .navbar .container .logo-con {
   position: relative;
   top: 20px;
   width: 400px;
 }
+
 .navbar .container .logo-con img {
   width: 100%;
 }
+
 .navbar .container ul {
   gap: 20px;
 }
+
 .navbar .container nav {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
-
 /*# sourceMappingURL=main.css.map */

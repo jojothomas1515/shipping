@@ -12,7 +12,7 @@
             <div class="tracker py-2 d-flex gap-3">
                 <p>Enter Tracking number</p>
                 <input type="text" class="px-3 mx-4" name="tracking num" id="tinput"/>
-                <input type="button" class="btn btn-primary px-3 mx-4" value="Track"/>
+                <input id='tracking-btn' type="button" class="btn btn-primary px-3 mx-4" value="Track"/>
             </div>
         </div>
     </section>
@@ -104,7 +104,7 @@
     <section class="mission bg-dark py-4">
         <div class="container text-white">
             <h3>The Most Progressive Company</h3>
-            <hr></hr>
+            <hr>
             <h6 class="text-secondary">
                 SMART EXPRESS DELIVERY IS YOUR EXPERT FOR SPECIAL SPEED LOGISTICS
                 WITH MORE THAN 10 YEARS OF EXPERIENCE IN COURIER BUSINESS.
@@ -133,4 +133,17 @@
             </div>
         </div>
     </section>
+
+    <div class="modal">
+        <div class="inner-con">
+            <div class="basic-info">
+                <ul>
+                    <li id='destination'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}
