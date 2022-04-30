@@ -2,7 +2,7 @@
 
 .navbar {
   background-color: var(--bs-dark);
-  top:0 !important;
+  top: 0 !important;
   height: 120px;
   position: sticky !important;
   position: -webkit-sticky !important;
@@ -28,35 +28,38 @@
       gap: 20px;
 
     }
-    nav{
-      height:max-content;
+
+    nav {
+      height: max-content;
     }
 
   }
 
 }
 
-.modal{
+.modal {
   margin: 40px;
   background-color: rgba($color: orangered, $alpha: .3);
   margin: 0 auto;
-  
-  .inner-con{
+
+  .inner-con {
     position: relative;
     width: 80%;
     height: 92%;
     background-color: orangered;
     margin: 30px auto;
 
-    #close{
+
+
+    #close {
       position: absolute;
       display: block;
       left: 98%;
       margin-top: 3px;
       border: 1px solid invert(black);
-      padding:0 3px;
+      padding: 0 3px;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
         background-color: beige;
       }
@@ -64,6 +67,4 @@
     }
   }
 }
-
-
 

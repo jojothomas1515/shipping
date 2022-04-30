@@ -1,9 +1,8 @@
 const modal = document.getElementsByClassName('modal')[0]
 const close = document.getElementById('close')
 const tracking_btn = document.getElementById('tracking-btn')
+const infos = document.getElementsByClassName('infos')
 
-const destination =  document.getElementById('destination')
-destination.textContent = 'lagos'
 
 close.addEventListener('click', () =>{
     modal.style.display = 'none'
@@ -11,23 +10,26 @@ close.addEventListener('click', () =>{
 })
 
 tracking_btn.addEventListener('click', () => {
-    get_info()
-    
-
-
-
+    console.log('clicking')
+    get_info(document.getElementById('tinput').value)
 })
 
-async function get_info(){
-    modal.style.display = 'block'
+async function get_info(tracking_num){
 
     let csrftoken = getCookie('csrftoken');
-    res = await fetch("track", {
+    res = await fetch("track",{
         method:'post',
-        body:JSON.stringify({tracking:'jojo'}),
-        headers: { "X-CSRFToken": csrftoken },
+        body:JSON.stringify({tracking:tracking_num}),
+        headers: { "X-CSRFToken": csrftoken ,'Content-Type': 'application/json'},
+    
     })
-    console.log(res)
+    const data = await res.json()
+
+    infos[0].textContent = `Details :${data.details}`
+    infos[1].textContent = `Destination :${data.destination}`
+    infos[2].textContent = `Current Location :${data.current_location}`
+    infos[3].textContent = `Sent From :${data.from_destination}`
+open_map(0)
 }
 
 function getCookie(name) {
@@ -52,7 +54,9 @@ function getCookie(name) {
 
 
 
-ymaps.ready(init);
+function open_map(){
+    modal.style.display ='block'
+    ymaps.ready(init);
     function init(){ 
         // Creating the map.    
         var myMap = new ymaps.Map("map", {
@@ -63,6 +67,14 @@ ymaps.ready(init);
             center: [55.76, 37.64],
             // Zoom level. Acceptable values:
             // from 0 (the entire world) to 19.
-            zoom: 7
+            zoom: 12,
+            controls:[],
         });
+        let placeMark = new ymaps.Placemark(myMap.getCenter(),{
+            hintContent:'current location',
+        })
+
+        myMap.geoObjects.add(placeMark);
+
     }
+}

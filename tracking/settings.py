@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ["https://koreass.herokuapp.com/"]
 
 INSTALLED_APPS = [
     'ship.apps.ShipConfig',
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
