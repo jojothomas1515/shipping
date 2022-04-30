@@ -12,11 +12,14 @@ close.addEventListener('click', () =>{
 
 tracking_btn.addEventListener('click', () => {
     get_info()
+    
+
 
 
 })
 
 async function get_info(){
+    modal.style.display = 'block'
 
     let csrftoken = getCookie('csrftoken');
     res = await fetch("track", {
@@ -42,3 +45,24 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
+
+
+
+
+
+
+ymaps.ready(init);
+    function init(){ 
+        // Creating the map.    
+        var myMap = new ymaps.Map("map", {
+            // The map center coordinates.
+            // Default order: “latitude, longitude”.
+            // To not manually determine the map center coordinates,
+            // use the Coordinate detection tool.
+            center: [55.76, 37.64],
+            // Zoom level. Acceptable values:
+            // from 0 (the entire world) to 19.
+            zoom: 7
+        });
+    }
