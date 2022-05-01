@@ -13,22 +13,21 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 
-
-
 # Create your views here.
 
 def index(request):
-
-    return render(request,'ship/index.html')
+    return render(request, 'ship/index.html')
 
 
 @api_view(['POST'])
 def track_info(request):
-        print('enetersd')
-        tracking_num = request.data['tracking']
-        print(tracking_num)
-        data = Shipment.objects.get(tracking_number=tracking_num)
-        serializer = ShipmentSerailizer(data)
-        print(serializer.data)
-        return Response(serializer.data)
+    u = 'hello ksjdnjk'
 
+    print('enetersd')
+
+    tracking_num = request.data['tracking']
+    print(tracking_num)
+    data = Shipment.objects.get(tracking_number=tracking_num)
+    serializer = ShipmentSerailizer(data)
+    print(serializer.data)
+    return Response(serializer.data)

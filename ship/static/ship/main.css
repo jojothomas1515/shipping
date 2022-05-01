@@ -6,33 +6,23 @@
   position: -webkit-sticky !important;
   z-index: 500;
 }
-
 .navbar .container {
   height: 100px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-content: center;
+  justify-content: space-between;
 }
-
 .navbar .container .logo-con {
   position: relative;
   top: 20px;
   width: 400px;
 }
-
 .navbar .container .logo-con img {
   width: 100%;
 }
-
 .navbar .container ul {
   gap: 20px;
 }
-
 .navbar .container nav {
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
 }
 
@@ -41,7 +31,6 @@
   background-color: rgba(255, 69, 0, 0.3);
   margin: 0 auto;
 }
-
 .modal .inner-con {
   position: relative;
   width: 80%;
@@ -49,7 +38,6 @@
   background-color: orangered;
   margin: 30px auto;
 }
-
 .modal .inner-con #close {
   position: absolute;
   display: block;
@@ -58,9 +46,11 @@
   border: 1px solid white;
   padding: 0 3px;
 }
-
 .modal .inner-con #close:hover {
   cursor: pointer;
-  background-color: beige;
+  background-color: black;
+  border-color: white;
+  color: white;
 }
+
 /*# sourceMappingURL=main.css.map */

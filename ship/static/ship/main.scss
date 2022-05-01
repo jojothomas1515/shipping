@@ -50,18 +50,21 @@
     margin: 30px auto;
 
 
-
     #close {
       position: absolute;
       display: block;
       left: 98%;
       margin-top: 3px;
-      border: 1px solid invert(black);
+      border: 1px solid white;
       padding: 0 3px;
 
       &:hover {
         cursor: pointer;
-        background-color: beige;
+        background-color: black;
+        border-color: white;
+        color: white;
+
+
       }
 
     }

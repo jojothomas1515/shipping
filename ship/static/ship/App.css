@@ -15,7 +15,7 @@
 }
 
 
-img{
+img {
     width: 100%;
 }
 
@@ -24,9 +24,6 @@ img{
     width: 100%;
     z-index: 100;
 }
-
-
-
 
 
 .navbar a {
@@ -72,7 +69,7 @@ i {
     font-weight: 200;
 }
 
-.info-content>div {
+.info-content > div {
     width: 200px;
     margin: 0 auto;
 }
@@ -109,16 +106,11 @@ i {
     border-color: orangered;
 }
 
-#map {
-    width: 100%;
-    height: 400px;
-}
 
-.mission-sub-con>div {
+.mission-sub-con > div {
     width: 400px;
     background-color: transparent;
 }
-
 
 
 @media (max-width: 1000px) {
