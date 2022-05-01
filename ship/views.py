@@ -21,10 +21,7 @@ def index(request):
 
 @api_view(['POST'])
 def track_info(request):
-    u = 'hello ksjdnjk'
-
     print('enetersd')
-
     tracking_num = request.data['tracking']
     print(tracking_num)
     data = Shipment.objects.get(tracking_number=tracking_num)
