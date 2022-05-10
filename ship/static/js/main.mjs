@@ -3,8 +3,9 @@ const close = document.getElementById('close')
 const tracking_btn = document.getElementById('tracking-btn')
 const infos = document.getElementsByClassName('infos')
 
+import Count from "./count.mjs";
 
-close.addEventListener('click', () =>{
+close.addEventListener('click', () => {
     modal.style.display = 'none'
     console.log("working")
 })
@@ -14,14 +15,14 @@ tracking_btn.addEventListener('click', () => {
     get_info(document.getElementById('tinput').value)
 })
 
-async function get_info(tracking_num){
+async function get_info(tracking_num) {
 
     let csrftoken = getCookie('csrftoken');
-    res = await fetch("track",{
-        method:'post',
-        body:JSON.stringify({tracking:tracking_num}),
-        headers: { "X-CSRFToken": csrftoken ,'Content-Type': 'application/json'},
-    
+    const res = await fetch("track", {
+        method: 'post',
+        body: JSON.stringify({tracking: tracking_num}),
+        headers: {"X-CSRFToken": csrftoken, 'Content-Type': 'application/json'},
+
     })
     const data = await res.json()
 
@@ -29,7 +30,8 @@ async function get_info(tracking_num){
     infos[1].textContent = `Destination :${data.destination}`
     infos[2].textContent = `Current Location :${data.current_location}`
     infos[3].textContent = `Sent From :${data.from_destination}`
-open_map(0)
+    open_map(0)
+    Count(10)
 }
 
 function getCookie(name) {
@@ -49,15 +51,11 @@ function getCookie(name) {
 }
 
 
-
-
-
-
-
-function open_map(){
-    modal.style.display ='block'
+function open_map() {
+    modal.style.display = 'block'
     ymaps.ready(init);
-    function init(){ 
+
+    function init() {
         // Creating the map.    
         var myMap = new ymaps.Map("map", {
             // The map center coordinates.
@@ -68,10 +66,10 @@ function open_map(){
             // Zoom level. Acceptable values:
             // from 0 (the entire world) to 19.
             zoom: 12,
-            controls:[],
+            controls: [],
         });
-        let placeMark = new ymaps.Placemark(myMap.getCenter(),{
-            hintContent:'current location',
+        let placeMark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'current location',
         })
 
         myMap.geoObjects.add(placeMark);

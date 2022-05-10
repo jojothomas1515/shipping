@@ -11,13 +11,12 @@
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-          <script src="https://api-maps.yandex.ru/2.1/?apikey=48ef30a7-5bd4-491b-88c8-fc0d43ed8923&lang=en_US" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=48ef30a7-5bd4-491b-88c8-fc0d43ed8923&lang=en_US"
+            type="text/javascript">
     </script>
+    <script src="{% static 'js/main.mjs' %}" type="module"></script>
 
-          
-          <script src="{% static 'js/main.js'%}" defer></script>
 
-          
     <title>Express Shipping Service</title>
 </head>
 <body class="">
@@ -26,5 +25,6 @@
 {% block content %}
 
 {% endblock %}
+
 </body>
 </html>
