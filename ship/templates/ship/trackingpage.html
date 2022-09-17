@@ -1,0 +1,18 @@
+{% extends "ship/Base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'ship/trackingpage.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="tracking-container">
+
+        <div class="tracking-input-container">
+            <input class="tracking-input" placeholder="Enter Tracking Number" type="text">
+            <input class="tracking-btn" type="submit"
+                   value="TRACK">
+        </div>
+
+    </div>
+{% endblock %}

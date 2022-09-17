@@ -27,3 +27,6 @@ def track_info(request):
     serializer = ShipmentSerailizer(data)
     print(serializer.data)
     return Response(serializer.data)
+
+def tracking_page(request):
+    return render(request, "ship/trackingpage.html")
