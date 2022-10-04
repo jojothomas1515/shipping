@@ -14,5 +14,59 @@
                    value="TRACK">
         </div>
 
+        {% block tracking_object_details %}
+
+            <main>
+                <section class="package-details">
+                    <div class="package-description">
+                        <div><span>Package Name :</span> Simone Parcel</div>
+                        <div><span>Package ID :</span> Simone Parcel</div>
+                        <div><span>Date Shipped :</span> Simone Parcel</div>
+                        <div><span>Delivery Date :</span> Simone Parcel</div>
+                        <div><span>Delivery Status :</span> Simone Parcel</div>
+                        <div><span>Weight (kg) :</span> Simone Parcel</div>
+                        <div><span>Delivery Note :</span> Simone Parcel</div>
+                    </div>
+
+                    <div class="package-image"><img src="{% static 'media/1-1.png' %}" alt=""></div>
+                </section>
+                <div class="pack-desc-text"><span>Package Description: </span> This package has been sealed as family
+                    property , please do not open until it gets to it designated location. Thanks for your cooperation
+                </div>
+                <section class="s-r-info">
+                    <div class="sender-information">
+                        <h1>Sender Information</h1>
+
+                        <div>
+                            <div><span>Name : MICHEAL</span></div>
+                            <div><span>Country :  AMERICA</span></div>
+                            <div><span>City : NEW YORK</span></div>
+                            <div><span>TEL : +01223242</span></div>
+                            <div><span>Email: MIMIMI@MAIL.COM</span></div>
+                        </div>
+
+                    </div>
+                    <div class="receiver-information">
+                        <h1>Receiver Information</h1>
+                        <div>
+                            <div><span>Name : MICHEAL</span></div>
+                            <div><span>Country :  AMERICA</span></div>
+                            <div><span>City : NEW YORK</span></div>
+                            <div><span>TEL : +01223242</span></div>
+                            <div><span>Email: MIMIMI@MAIL.COM</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63418.72762958233!2d3.321469527912889!3d6.563212688714463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1664918175697!5m2!1sen!2sng"
+                            width="100%" height="450" style="border:0;" scrolling="no" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+
+            </main>
+        {% endblock %}
+
     </div>
 {% endblock %}
