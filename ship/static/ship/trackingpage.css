@@ -56,21 +56,27 @@ main section {
 main .package-details {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  height: max-content;
+  align-items: center;
+  justify-content: stretch;
 }
 @media (min-width: 900px) {
   main .package-details {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
   }
 }
 main .package-details .package-description {
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #4b0e03;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   color: white;
+  border-right: 1px solid grey;
+  max-width: 500px;
+  min-width: 300px;
 }
 main .package-details .package-description div:not(:first-child) {
   border-top: 1px solid gray;
@@ -84,13 +90,16 @@ main .package-details .package-description div span {
   font-weight: bold;
 }
 main .package-details .package-image {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #4b0e03;
   padding: 2rem;
   display: flex;
+  max-width: 500px;
+  min-width: 300px;
   align-items: center;
 }
 main .package-details .package-image img {
   width: 100%;
+  aspect-ratio: 1/1;
   object-fit: contain;
 }
 @media (min-width: 900px) {

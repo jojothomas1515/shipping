@@ -9,8 +9,8 @@
     <div class="tracking-container">
 
         <div class="tracking-input-container">
-            <input class="tracking-input" placeholder="Enter Tracking Number" type="text">
-            <input class="tracking-btn" type="submit"
+            <input class="tracking-input" id="tracking-input" placeholder="Enter Tracking Number" type="text">
+            <input class="tracking-btn" id="tracking-btn" type="submit"
                    value="TRACK">
         </div>
 
@@ -19,13 +19,13 @@
             <main>
                 <section class="package-details">
                     <div class="package-description">
-                        <div><span>Package Name :</span> Simone Parcel</div>
-                        <div><span>Package ID :</span> Simone Parcel</div>
-                        <div><span>Date Shipped :</span> Simone Parcel</div>
-                        <div><span>Delivery Date :</span> Simone Parcel</div>
-                        <div><span>Delivery Status :</span> Simone Parcel</div>
-                        <div><span>Weight (kg) :</span> Simone Parcel</div>
-                        <div><span>Delivery Note :</span> Simone Parcel</div>
+                        <div><span>Package Name :</span><span class="info">Simone Parcel</span></div>
+                        <div><span>Package ID :</span> <span class="info">Simone Parcel</span></div>
+                        <div><span>Date Shipped :</span> <span class="info">Simone Parcel</span></div>
+                        <div><span>Delivery Date :</span> <span class="info">Simone Parcel</span></div>
+                        <div><span>Delivery Status :</span> <span class="info">Simone Parcel</span></div>
+                        <div><span>Weight (kg) :</span> <span class="info">Simone Parcel</span></div>
+                        <div><span>Delivery Note :</span> <span class="info">Simone Parcel</span></div>
                     </div>
 
                     <div class="package-image"><img src="{% static 'media/1-1.png' %}" alt=""></div>
@@ -38,22 +38,22 @@
                         <h1>Sender Information</h1>
 
                         <div>
-                            <div><span>Name : MICHEAL</span></div>
-                            <div><span>Country :  AMERICA</span></div>
-                            <div><span>City : NEW YORK</span></div>
-                            <div><span>TEL : +01223242</span></div>
-                            <div><span>Email: MIMIMI@MAIL.COM</span></div>
+                            <div><span>Name :  <span class="sender_data"></span></span></div>
+                            <div><span>Country :  <span class="sender_data"></span></span></div>
+                            <div><span>City :  <span class="sender_data"></span></span></div>
+                            <div><span>TEL :  <span class="sender_data"></span></span></div>
+                            <div><span>Email:  <span class="sender_data"></span></span></div>
                         </div>
 
                     </div>
                     <div class="receiver-information">
                         <h1>Receiver Information</h1>
                         <div>
-                            <div><span>Name : MICHEAL</span></div>
-                            <div><span>Country :  AMERICA</span></div>
-                            <div><span>City : NEW YORK</span></div>
-                            <div><span>TEL : +01223242</span></div>
-                            <div><span>Email: MIMIMI@MAIL.COM</span></div>
+                            <div><span>Name :  <span class="receiver_data"></span></span></div>
+                            <div><span>Country :  <span class="receiver_data"></span></span></div>
+                            <div><span>City :  <span class="receiver_data"></span></span></div>
+                            <div><span>TEL :  <span class="receiver_data"></span></span></div>
+                            <div><span>Email:  <span class="receiver_data"></span></span></div>
                         </div>
                     </div>
                 </section>

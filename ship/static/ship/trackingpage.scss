@@ -63,20 +63,28 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    height: max-content;
+    align-items: center;
+    justify-content: stretch;
+    //background-color: #4b0e03;
     @media (min-width: 900px) {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: stretch;
+
     }
 
     .package-description {
 
       padding: 2rem;
-      background-color: rgba(0, 0, 0, .7);
+      background-color: #4b0e03;
       display: flex;
       gap: 1rem;
       flex-direction: column;
       color: white;
+      border-right: 1px solid grey;
+      max-width: 500px;
+        min-width: 300px;
 
       div:not(:first-child) {
         border-top: 1px solid gray;
@@ -96,13 +104,19 @@ main {
     }
 
     .package-image {
-      background-color: rgba(0, 0, 0, .7);
+      background-color: #4b0e03;
       padding: 2rem;
       display: flex;
+        max-width: 500px;
+        min-width: 300px;
+
+
       align-items: center;
 
       img {
         width: 100%;
+
+        aspect-ratio: 1/1;
         object-fit: contain;
 
 

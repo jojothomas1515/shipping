@@ -1,18 +1,12 @@
-const modal = document.getElementsByClassName('modal')[0]
-const close = document.getElementById('close')
 const tracking_btn = document.getElementById('tracking-btn')
-const infos = document.getElementsByClassName('infos')
+const infos = document.getElementsByClassName('info')
+const sender_data = document.getElementsByClassName('sender_data')
+const receiver_data = document.getElementsByClassName('receiver_data')
 
-import Count from "./count.mjs";
-
-close.addEventListener('click', () => {
-    modal.style.display = 'none'
-    console.log("working")
-})
 
 tracking_btn.addEventListener('click', () => {
     console.log('clicking')
-    get_info(document.getElementById('tinput').value)
+    get_info(document.getElementById('tracking-input').value)
 })
 
 async function get_info(tracking_num) {
@@ -26,12 +20,29 @@ async function get_info(tracking_num) {
     })
     const data = await res.json()
 
-    infos[0].textContent = `Details :${data.details}`
-    infos[1].textContent = `Destination :${data.destination}`
-    infos[2].textContent = `Current Location :${data.current_location}`
-    infos[3].textContent = `Sent From :${data.from_destination}`
-    open_map(0)
-    Count(10)
+    console.log(data)
+
+    infos[0].textContent = `${data.package.package_name}`
+    infos[1].textContent = `${data.package.package_id}`
+    infos[2].textContent = `${data.package.date_shiped}`
+    infos[3].textContent = `${data.package.delivery_date}`
+    infos[4].textContent = `${data.package.delivery_status}`
+    infos[5].textContent = `${data.package.weight}`
+    infos[6].textContent = `${data.package.delivery_note}`
+
+    sender_data[0].textContent = `${data.sender.name}`
+    sender_data[1].textContent = `${data.sender.country}`
+    sender_data[2].textContent = `${data.sender.city}`
+    sender_data[3].textContent = `${data.sender.phone}`
+    sender_data[4].textContent = `${data.sender.email}`
+
+    receiver_data[0].textContent = `${data.receiver.name}`
+    receiver_data[1].textContent = `${data.receiver.country}`
+    receiver_data[2].textContent = `${data.receiver.city}`
+    receiver_data[3].textContent = `${data.receiver.phone}`
+    receiver_data[4].textContent = `${data.receiver.email}`
+
+
 }
 
 function getCookie(name) {
@@ -51,28 +62,28 @@ function getCookie(name) {
 }
 
 
-function open_map() {
-    modal.style.display = 'block'
-    ymaps.ready(init);
-
-    function init() {
-        // Creating the map.    
-        var myMap = new ymaps.Map("map", {
-            // The map center coordinates.
-            // Default order: “latitude, longitude”.
-            // To not manually determine the map center coordinates,
-            // use the Coordinate detection tool.
-            center: [55.76, 37.64],
-            // Zoom level. Acceptable values:
-            // from 0 (the entire world) to 19.
-            zoom: 12,
-            controls: [],
-        });
-        let placeMark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'current location',
-        })
-
-        myMap.geoObjects.add(placeMark);
-
-    }
-}
+// function open_map() {
+//     modal.style.display = 'block'
+//     ymaps.ready(init);
+//
+//     function init() {
+//         // Creating the map.
+//         var myMap = new ymaps.Map("map", {
+//             // The map center coordinates.
+//             // Default order: “latitude, longitude”.
+//             // To not manually determine the map center coordinates,
+//             // use the Coordinate detection tool.
+//             center: [55.76, 37.64],
+//             // Zoom level. Acceptable values:
+//             // from 0 (the entire world) to 19.
+//             zoom: 12,
+//             controls: [],
+//         });
+//         let placeMark = new ymaps.Placemark(myMap.getCenter(), {
+//             hintContent: 'current location',
+//         })
+//
+//         myMap.geoObjects.add(placeMark);
+//
+//     }
+// }
