@@ -49,13 +49,19 @@
   }
 }
 
+#package-information {
+  display: none;
+}
+
 main {
-  section{
+
+
+  section {
     width: 100%;
   }
+
   margin-top: 1rem;
   width: 100%;
-  display: flex;
   flex-direction: column;
   gap: 2rem;
 
@@ -84,7 +90,7 @@ main {
       color: white;
       border-right: 1px solid grey;
       max-width: 500px;
-        min-width: 300px;
+      min-width: 300px;
 
       div:not(:first-child) {
         border-top: 1px solid gray;
@@ -107,8 +113,8 @@ main {
       background-color: #4b0e03;
       padding: 2rem;
       display: flex;
-        max-width: 500px;
-        min-width: 300px;
+      max-width: 500px;
+      min-width: 300px;
 
 
       align-items: center;
@@ -181,5 +187,35 @@ main {
 
 
     }
+  }
+}
+
+#spinner {
+  --size: 50px;
+  position: fixed;
+  display: none;
+  top:50%;
+  left: 50%;
+  translate: (-50, -50);
+  width: var(--size);
+  height: var(--size);
+  //background-color: #4b0e03;
+  border-radius: 360px;
+  border: 4px solid #4b0e03;
+  border-right: 3px solid white;
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 360deg;
   }
 }

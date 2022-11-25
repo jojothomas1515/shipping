@@ -1,3 +1,5 @@
+const package_info_container = document.getElementById("package-information")
+const spinner = document.getElementById("spinner")
 const tracking_btn = document.getElementById('tracking-btn')
 const infos = document.getElementsByClassName('info')
 const sender_data = document.getElementsByClassName('sender_data')
@@ -5,43 +7,59 @@ const receiver_data = document.getElementsByClassName('receiver_data')
 
 
 tracking_btn.addEventListener('click', () => {
-    console.log('clicking')
+    if (document.getElementById('tracking-input').value === "") return
     get_info(document.getElementById('tracking-input').value)
 })
 
 async function get_info(tracking_num) {
-
+    spinner.style.display = "block"
+    spinner.style.animationPlayState = "running"
     let csrftoken = getCookie('csrftoken');
+
     const res = await fetch("track", {
         method: 'post',
         body: JSON.stringify({tracking: tracking_num}),
-        headers: {"X-CSRFToken": csrftoken, 'Content-Type': 'application/json'},
-
+        headers: {"X-CSRFToken": csrftoken, 'Content-Type': 'application/json'}
     })
+
     const data = await res.json()
+    if (res.status === 404) {
+        setTimeout(() => {
+            alert("No Package with that TRN")
+            spinner.style.animationPlayState = "paused"
+            spinner.style.display = "none"
+            return (null)
+        }, 200)
+    }
+    if (res.status === 200) {
+        infos[0].textContent = `${data.package.package_name}`
+        infos[1].textContent = `${data.package.package_id}`
+        infos[2].textContent = `${data.package.date_shiped}`
+        infos[3].textContent = `${data.package.delivery_date}`
+        infos[4].textContent = `${data.package.delivery_status}`
+        infos[5].textContent = `${data.package.weight}`
+        infos[6].textContent = `${data.package.delivery_note}`
 
-    console.log(data)
+        sender_data[0].textContent = `${data.sender.name}`
+        sender_data[1].textContent = `${data.sender.country}`
+        sender_data[2].textContent = `${data.sender.city}`
+        sender_data[3].textContent = `${data.sender.phone}`
+        sender_data[4].textContent = `${data.sender.email}`
 
-    infos[0].textContent = `${data.package.package_name}`
-    infos[1].textContent = `${data.package.package_id}`
-    infos[2].textContent = `${data.package.date_shiped}`
-    infos[3].textContent = `${data.package.delivery_date}`
-    infos[4].textContent = `${data.package.delivery_status}`
-    infos[5].textContent = `${data.package.weight}`
-    infos[6].textContent = `${data.package.delivery_note}`
+        receiver_data[0].textContent = `${data.receiver.name}`
+        receiver_data[1].textContent = `${data.receiver.country}`
+        receiver_data[2].textContent = `${data.receiver.city}`
+        receiver_data[3].textContent = `${data.receiver.phone}`
+        receiver_data[4].textContent = `${data.receiver.email}`
 
-    sender_data[0].textContent = `${data.sender.name}`
-    sender_data[1].textContent = `${data.sender.country}`
-    sender_data[2].textContent = `${data.sender.city}`
-    sender_data[3].textContent = `${data.sender.phone}`
-    sender_data[4].textContent = `${data.sender.email}`
 
-    receiver_data[0].textContent = `${data.receiver.name}`
-    receiver_data[1].textContent = `${data.receiver.country}`
-    receiver_data[2].textContent = `${data.receiver.city}`
-    receiver_data[3].textContent = `${data.receiver.phone}`
-    receiver_data[4].textContent = `${data.receiver.email}`
+        setTimeout(() => {
+            package_info_container.style.display = "flex"
+            spinner.style.animationPlayState = "paused"
+            spinner.style.display = "none"
+        }, 5000)
 
+    }
 
 }
 

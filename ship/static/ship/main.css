@@ -23,6 +23,8 @@
   gap: 20px;
 }
 .navbar .container nav {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -53,4 +55,81 @@
   color: white;
 }
 
-/*# sourceMappingURL=main.css.map */
+.experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10%;
+  gap: 2rem;
+}
+@media screen and (min-width: 760px) {
+  .experience {
+    flex-direction: row;
+  }
+}
+.experience > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  min-width: 500px;
+}
+@media screen and (min-width: 760px) {
+  .experience > div:first-child {
+    max-width: 50%;
+  }
+}
+.experience > div:first-child * {
+  font-size: 15px;
+}
+.experience > div:first-child h1 {
+  font-weight: 700;
+  font-size: 35px;
+}
+.experience > div:first-child .bold {
+  font-weight: bold;
+  font-max-size: 18px;
+}
+.experience > div:first-child .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.experience > div:first-child .badges > div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.experience > div:first-child .badges > div > div {
+  height: 50px;
+}
+.experience > div:first-child .badges h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.experience > div:first-child .badges img {
+  max-width: 50px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.experience > div:first-child ul {
+  list-style-type: none;
+}
+.experience > div:first-child li:before {
+  font-family: FontAwesome;
+  content: "\f560";
+  margin-right: 0.4rem;
+  font-weight: bolder;
+  color: #4c84db;
+}
+.experience > div:last-child {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (min-width: 760px) {
+  .experience > div:last-child img {
+    width: 500px;
+  }
+}/*# sourceMappingURL=main.css.map */
