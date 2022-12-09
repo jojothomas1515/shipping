@@ -28,33 +28,36 @@
   height: max-content;
 }
 
+/* 
 .modal {
   margin: 40px;
-  background-color: rgba(255, 69, 0, 0.3);
+  background-color: rgba($color: orangered, $alpha: 0.3);
   margin: 0 auto;
-}
-.modal .inner-con {
-  position: relative;
-  width: 80%;
-  height: 92%;
-  background-color: orangered;
-  margin: 30px auto;
-}
-.modal .inner-con #close {
-  position: absolute;
-  display: block;
-  left: 98%;
-  margin-top: 3px;
-  border: 1px solid white;
-  padding: 0 3px;
-}
-.modal .inner-con #close:hover {
-  cursor: pointer;
-  background-color: black;
-  border-color: white;
-  color: white;
-}
 
+  .inner-con {
+    position: relative;
+    width: 80%;
+    height: 92%;
+    background-color: orangered;
+    margin: 30px auto;
+
+    #close {
+      position: absolute;
+      display: block;
+      left: 98%;
+      margin-top: 3px;
+      border: 1px solid white;
+      padding: 0 3px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        border-color: white;
+        color: white;
+      }
+    }
+  }
+} */
 .experience {
   display: flex;
   flex-direction: column;
@@ -132,4 +135,68 @@
   .experience > div:last-child img {
     width: 500px;
   }
+}
+
+.beyond-logistics {
+  background-image: url("/static/media/beyondlog/logis-50.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
+}
+.beyond-logistics * {
+  z-index: 2;
+}
+.beyond-logistics .shade {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.beyond-logistics .logistics__first {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* ceo con */
+}
+.beyond-logistics .logistics__first * {
+  color: white;
+}
+.beyond-logistics .logistics__first h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+.beyond-logistics .logistics__first p {
+  font-size: 15px;
+}
+.beyond-logistics .logistics__first .ceo__con {
+  display: flex;
+  gap: 0.5rem;
+}
+.beyond-logistics .logistics__first .ceo__con .ceo__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.beyond-logistics .logistics__first .ceo__con .ceo__info .ceo__name {
+  font-weight: bold;
+}
+.beyond-logistics .logistics__first .ceo__con .ceo__info .ceo__role {
+  color: #4c84db;
+}
+.beyond-logistics .logistics__first .ceo__con img {
+  max-width: 70px;
+  max-height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  border: 1px solid white;
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */

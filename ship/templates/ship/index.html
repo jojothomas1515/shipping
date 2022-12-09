@@ -1,12 +1,13 @@
 {% extends 'ship/Base.html' %} {% load static %} {% block content %}
 <section class="intro bg-dark">
   <div
-    class="container py-4 text-white text-center d-flex flex-column justify-content-around">
+    class="container py-4 text-white text-center d-flex flex-column justify-content-around"
+  >
     <div>
       <p class="mt-5">We are the leading</p>
       <h1 class="">WORLDWIDE FREIGHT DELIVERY</h1>
     </div>
-
+    {% comment %}
     <div class="tracker py-2 d-flex gap-3">
       <p>Enter Tracking number</p>
 
@@ -18,6 +19,7 @@
         value="Track"
       />
     </div>
+    {% endcomment %}
   </div>
 </section>
 <section class="bg-dark text-white">
@@ -137,32 +139,91 @@
 </section>
 
 <section class="beyond-logistics">
+  <div class="shade"></div>
   <div class="logistics__first">
     <h1>Go Beyond Logistics, Make The World Go Round</h1>
-    <p class="bold">
+    <strong class="bold">
       We represent UN Delivery Company, a company with more than 35 years in the
       market and globally positionedamong the top three companies in the
       logistics sector.
-    </p>
+    </strong>
     <p>
       Our qualified human team guarantees you an essential experience and
       professionalism, with a personalized treatment to solve any of your needs.
     </p>
     <div class="ceo__con">
-        <img src="{% static 'media/avatar-7.jpg' %}" alt="ceo">
-        <div class="ceo__info">
-            <h5 class="ceo__name">Daniel Kyle</h5>
-            <p class="ceo__role">UN Delivery Company CEO</p>
-        </div>
+      <img src="{% static 'media/avatar-7.jpg' %}" alt="ceo" />
+      <div class="ceo__info">
+        <h5 class="ceo__name">Daniel Kyle</h5>
+        <p class="ceo__role">UN Delivery Company CEO</p>
+      </div>
     </div>
   </div>
   <div class="logistics__last">
-    <div class="card">
-
+    <div class="cards">
+      <div class="card">
+        <img src="{% static 'media/beyondlog/shield.png' %}" alt="" />
+        <div>
+          <h5>Certified Process</h5>
+          <p class="faded">We drive you towards continuous improvement.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'media/beyondlog/touch.png' %}" alt="" />
+        <div>
+          <h5>High Technology</h5>
+          <p class="faded">Authorization and Compliance Service.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'media/beyondlog/shield.png' %}" alt="" />
+        <div>
+          <h5>Awarded Company</h5>
+          <p class="faded">The best highly efficient customs brokerage.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'media/beyondlog/support-2.png' %}" alt="" />
+        <div>
+          <h5>24/7 Support</h5>
+          <p class="faded">
+            We care for security of the packages we transport.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="video__play"></div>
+    <div class="video__play">
+      <a
+        class="popup-youtube d-flex justify-content-center"
+        href="https://www.youtube.com/watch?v=KEFt2quibkg"
+      >
+        <div class="pulse"><i class="fas fa-play"></i></div>
+      </a>
+    </div>
   </div>
 </section>
 
+<section class="meet_the_team">
+  <h3>Go Far Together</h3>
+  <h1>Meet The Team</h1>
+
+  <div>
+    <div class="teammates">
+      <img src="{% static 'media/team/team-portrait-4.jpg' %}" alt="">
+      <h4>Harry Callum</h4>
+      <p>Warehouse Principal</p>
+    </div>
+    <div class="teammates">
+      <img src="{% static 'media/team/team-portrait-5.jpg' %}" alt="">
+      <h4>Anthony Lauren</h4>
+      <p>Logistics Coordinator</p>
+    </div>
+    <div class="teammates">
+      <img src="{% static 'media/team/team-portrait-6.jpg' %}" alt="">
+      <h4>Oliver Jacob</h4>
+      <p>Logistics Analyst</p>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
