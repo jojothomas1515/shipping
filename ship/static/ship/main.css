@@ -131,6 +131,9 @@
   width: -moz-max-content;
   width: max-content;
 }
+.experience > div:last-child img {
+  max-width: 100%;
+}
 @media screen and (min-width: 760px) {
   .experience > div:last-child img {
     width: 500px;
@@ -145,19 +148,16 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  z-index: 0;
-}
-.beyond-logistics * {
-  z-index: 2;
 }
 .beyond-logistics .shade {
   background-color: rgba(0, 0, 0, 0.6) !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .beyond-logistics .logistics__first {
   display: flex;
@@ -165,12 +165,17 @@
   gap: 2rem;
   /* ceo con */
 }
+@media screen and (min-width: 760px) {
+  .beyond-logistics .logistics__first {
+    max-width: 500px;
+  }
+}
 .beyond-logistics .logistics__first * {
   color: white;
 }
 .beyond-logistics .logistics__first h1 {
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 900;
 }
 .beyond-logistics .logistics__first p {
   font-size: 15px;
@@ -182,7 +187,7 @@
 .beyond-logistics .logistics__first .ceo__con .ceo__info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
 }
 .beyond-logistics .logistics__first .ceo__con .ceo__info .ceo__name {
   font-weight: bold;
@@ -199,4 +204,100 @@
      object-position: center;
   border: 1px solid white;
   border-radius: 50%;
+}
+.beyond-logistics .logistics__last {
+  display: flex;
+  gap: 1rem;
+  width: 600px;
+  flex-direction: column;
+}
+.beyond-logistics .logistics__last .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 100px);
+  gap: 1rem;
+}
+.beyond-logistics .logistics__last .card {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1d428a;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border-radius: 0;
+}
+.beyond-logistics .logistics__last .card * {
+  color: white;
+}
+.beyond-logistics .logistics__last .card h5 {
+  font-weight: bold;
+}
+.beyond-logistics .logistics__last .card .faded {
+  font-weight: lighter;
+  color: #96bee9;
+  font-size: 14px;
+}
+.beyond-logistics .logistics__last .card img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.beyond-logistics .logistics__last .video__play {
+  background-image: url("/static/media/beyondlog/logis-52.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.beyond-logistics .logistics__last .video__play .pulse {
+  background-color: #4c84db;
+  width: 70px;
+  height: 70px;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beyond-logistics .logistics__last .video__play .pulse * {
+  color: white;
+}
+.beyond-logistics .logistics__last .video__play .pulse i {
+  font-size: 2rem;
+}
+
+.meet_the_team {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.meet_the_team > div {
+  display: flex;
+  gap: 2rem;
+  max-width: 1080px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.meet_the_team .teammates {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+}
+.meet_the_team .teammates .info {
+  text-align: center;
+}
+.meet_the_team .teammates .info h4 {
+  font-weight: bold;
+}
+.meet_the_team .teammates .info p {
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */
