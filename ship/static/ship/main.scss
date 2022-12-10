@@ -3,7 +3,7 @@
 .navbar {
   background-color: var(--bs-dark);
   top: 0 !important;
-  height: 120px;
+  height: 100px;
   position: sticky !important;
   position: -webkit-sticky !important;
   z-index: 500;
@@ -15,11 +15,12 @@
 
     .logo-con {
       position: relative;
-      top: 20px;
-      width: 400px;
+      width: 200px;
+      height: 100px;
 
       img {
         width: 100%;
+        height: 100%;
       }
     }
 
@@ -30,9 +31,13 @@
     nav {
       height: max-content;
     }
+
+    .btn {
+      border-radius: 0;
+    }
   }
 }
-
+/* 
 .modal {
   margin: 40px;
   background-color: rgba($color: orangered, $alpha: 0.3);
@@ -61,7 +66,7 @@
       }
     }
   }
-}
+} */
 
 .experience {
   display: flex;
@@ -144,6 +149,182 @@
     img {
       @media screen and (min-width: 760px) {
         width: 500px;
+      }
+      max-width: 100%;
+    }
+  }
+}
+
+.beyond-logistics {
+  background-image: url("/static/media/beyondlog/logis-50.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+
+  .shade {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .logistics__first {
+    @media screen and (min-width: 760px) {
+      max-width: 500px;
+    }
+
+    * {
+      color: white;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 900;
+    }
+    p {
+      font-size: 15px;
+    }
+
+    /* ceo con */
+    .ceo__con {
+      display: flex;
+      gap: 0.5rem;
+      .ceo__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .ceo__name {
+          font-weight: bold;
+        }
+        .ceo__role {
+          color: #4c84db;
+        }
+      }
+      img {
+        max-width: 70px;
+        max-height: 70px;
+        object-fit: contain;
+        object-position: center;
+        border: 1px solid white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .logistics__last {
+    display: flex;
+    gap: 1rem;
+    width: 600px;
+    flex-direction: column;
+
+    .cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 100px);
+      gap: 1rem;
+    }
+
+    .card {
+      width: 100%;
+      padding: 1rem;
+      background-color: #1d428a;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      border-radius: 0;
+      * {
+        color: white;
+      }
+
+      h5 {
+        font-weight: bold;
+      }
+      .faded {
+        font-weight: lighter;
+        color: #96bee9;
+        font-size: 14px;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    .video__play {
+      background-image: url("/static/media/beyondlog/logis-52.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 300px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      .pulse {
+        * {
+          color: white;
+        }
+        background-color: #4c84db;
+        width: 70px;
+        height: 70px;
+        border-radius: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.meet_the_team {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:2rem 0;
+
+  h3{
+    color:#1d428a;
+  }
+  > div {
+    display: flex;
+    gap: 2rem;
+    max-width: 1080px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .teammates {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+    max-width: 300px;
+
+    .info {
+      text-align: center;
+      h4{
+        font-weight: bold;
+      }
+      p{
+        font-size: 14px;
       }
     }
   }
