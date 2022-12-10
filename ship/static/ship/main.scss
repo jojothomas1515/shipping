@@ -3,7 +3,7 @@
 .navbar {
   background-color: var(--bs-dark);
   top: 0 !important;
-  height: 120px;
+  height: 100px;
   position: sticky !important;
   position: -webkit-sticky !important;
   z-index: 500;
@@ -15,11 +15,12 @@
 
     .logo-con {
       position: relative;
-      top: 20px;
-      width: 400px;
+      width: 200px;
+      height: 100px;
 
       img {
         width: 100%;
+        height: 100%;
       }
     }
 
@@ -29,6 +30,10 @@
 
     nav {
       height: max-content;
+    }
+
+    .btn {
+      border-radius: 0;
     }
   }
 }
@@ -292,8 +297,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  padding:2rem 0;
 
+  h3{
+    color:#1d428a;
+  }
   > div {
     display: flex;
     gap: 2rem;

@@ -1,7 +1,7 @@
 .navbar {
   background-color: var(--bs-dark);
   top: 0 !important;
-  height: 120px;
+  height: 100px;
   position: sticky !important;
   position: -webkit-sticky !important;
   z-index: 500;
@@ -13,11 +13,12 @@
 }
 .navbar .container .logo-con {
   position: relative;
-  top: 20px;
-  width: 400px;
+  width: 200px;
+  height: 100px;
 }
 .navbar .container .logo-con img {
   width: 100%;
+  height: 100%;
 }
 .navbar .container ul {
   gap: 20px;
@@ -26,6 +27,9 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+.navbar .container .btn {
+  border-radius: 0;
 }
 
 /* 
@@ -276,7 +280,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  padding: 2rem 0;
+}
+.meet_the_team h3 {
+  color: #1d428a;
 }
 .meet_the_team > div {
   display: flex;

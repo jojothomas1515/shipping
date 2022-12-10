@@ -37,12 +37,12 @@ img {
 
 .navbar a {
     color: white;
-    border-color: orangered;
+    border-color:#4c84db;
 }
 
 .navbar a:hover {
-    border-color: orangered;
-    background-color: orangered;
+    border-color:#4c84db;
+    background-color:#4c84db;
 }
 
 .intro {
@@ -64,12 +64,12 @@ img {
 .intro p {
     width: 350px;
     font-size: 40px;
-    background-color: orangered;
+    background-color:#4c84db;
     margin: 0 auto;
 }
 
 i {
-    color: orangered;
+    color:#4c84db;
 }
 
 .info-content {
@@ -98,7 +98,7 @@ i {
 
 .tracker {
     align-items: center;
-    border: 1px solid orangered;
+    border: 1px solid#4c84db;
 }
 
 .tracker p {
@@ -110,8 +110,8 @@ i {
 }
 
 .tracker .btn {
-    background-color: orangered;
-    border-color: orangered;
+    background-color:#4c84db;
+    border-color:#4c84db;
 
 }
 
