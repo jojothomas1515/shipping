@@ -37,7 +37,8 @@
     }
   }
 }
-/* 
+
+/*
 .modal {
   margin: 40px;
   background-color: rgba($color: orangered, $alpha: 0.3);
@@ -83,8 +84,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 600px;
-    min-width: 500px;
 
     @media screen and (min-width: 760px) {
       max-width: 50%;
@@ -145,14 +144,23 @@
   }
 
   > div:last-child {
-    width: 100%;
+    width: 40%;
+
+    @media screen and (min-width: 760px) {
+      width: 40%;
+
+    }
+
+
     img {
       @media screen and (min-width: 760px) {
         max-width: 500px;
       }
-      max-width: 100%;
+      min-width: 350px;
+
     }
   }
+
 }
 
 .beyond-logistics {
@@ -181,6 +189,7 @@
     * {
       color: white;
     }
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -189,6 +198,7 @@
       font-size: 35px;
       font-weight: 900;
     }
+
     p {
       font-size: 15px;
     }
@@ -197,17 +207,21 @@
     .ceo__con {
       display: flex;
       gap: 0.5rem;
+
       .ceo__info {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         .ceo__name {
           font-weight: bold;
         }
+
         .ceo__role {
           color: #4c84db;
         }
       }
+
       img {
         max-width: 70px;
         max-height: 70px;
@@ -241,6 +255,7 @@
       flex-direction: row;
       gap: 1rem;
       border-radius: 0;
+
       * {
         color: white;
       }
@@ -248,6 +263,7 @@
       h5 {
         font-weight: bold;
       }
+
       .faded {
         font-weight: lighter;
         color: #96bee9;
@@ -276,6 +292,7 @@
         * {
           color: white;
         }
+
         background-color: #4c84db;
         width: 70px;
         height: 70px;
@@ -297,11 +314,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding:2rem 0;
+  padding: 2rem 0;
 
-  h3{
-    color:#1d428a;
+  h3 {
+    color: #1d428a;
   }
+
   > div {
     display: flex;
     gap: 2rem;
@@ -315,15 +333,17 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
     max-width: 300px;
 
     .info {
       text-align: center;
-      h4{
+
+      h4 {
         font-weight: bold;
       }
-      p{
+
+      p {
         font-size: 14px;
       }
     }
