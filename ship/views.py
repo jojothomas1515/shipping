@@ -23,7 +23,7 @@ def track_info(request):
         package_serializer = ShipmentSerializer(package)
         sender_serializer = SenderSerializer(sender)
         reciever_serializer = RecieverSerializer(reciever)
-        result = {}
+        result: dict = {}
         result['package'] = package_serializer.data
         result['sender'] = sender_serializer.data
         result['receiver'] = reciever_serializer.data

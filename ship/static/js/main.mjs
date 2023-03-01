@@ -4,6 +4,8 @@ const tracking_btn = document.getElementById('tracking-btn')
 const infos = document.getElementsByClassName('info')
 const sender_data = document.getElementsByClassName('sender_data')
 const receiver_data = document.getElementsByClassName('receiver_data')
+const package_image = document.getElementById("package_img")
+const map_frame = document.getElementById("mapframe")
 
 
 tracking_btn.addEventListener('click', () => {
@@ -39,6 +41,8 @@ async function get_info(tracking_num) {
         infos[4].textContent = `${data.package.delivery_status}`
         infos[5].textContent = `${data.package.weight}`
         infos[6].textContent = `${data.package.delivery_note}`
+        package_image.src = `${data.package.package_img}`
+        map_frame.src = `${data.package.map_url}`
 
         sender_data[0].textContent = `${data.sender.name}`
         sender_data[1].textContent = `${data.sender.country}`
