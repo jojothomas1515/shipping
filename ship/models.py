@@ -6,7 +6,7 @@ class Package(models.Model):
     tracking_number = models.CharField(max_length=50, unique=True)
     package_name = models.CharField(max_length=50, null=True, blank=True)
     package_id = models.CharField(max_length=50, null=True, blank=True)
-    package_img = models.ImageField(blank=True, null=True)
+    package_img = models.ImageField()
 
     weight = models.CharField(max_length=50, null=True, blank=True)
 
